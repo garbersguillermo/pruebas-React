@@ -83,7 +83,7 @@ export default function Step2({ onValidation }) {
                       
         </div>
         <div className="checkbox-container">
-            <div>
+            <div className="check-container">
             <input
               type="checkbox"
               id="terms-checkbox"
@@ -96,7 +96,7 @@ export default function Step2({ onValidation }) {
               required
             />
             </div>
-            <div>
+            <div className="terms-container">
             <label htmlFor="terms-checkbox">
             Estoy de acuerdo con los <a href="/terminos-y-condiciones">Términos y Condiciones</a>
           </label>
