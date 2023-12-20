@@ -1,0 +1,243 @@
+// Definición de variables comunes (opcional)
+$color-scrollbar-thumb: #505050;
+$color-scrollbar-thumb-hover: #101010;
+$color-scrollbar-track: #303030;
+$color-button-gradient-start: #e81cff;
+$color-button-gradient-end: #40c9ff;
+$color-background-button: #202020;
+$gradient-button: linear-gradient($color-background-button, $color-background-button) padding-box, 
+                  linear-gradient(145deg, $color-button-gradient-start, $color-button-gradient-end) border-box;
+
+// Estilos base
+img {
+  max-width: none !important;
+}
+
+// Estilos para el scrollbar
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $color-scrollbar-thumb;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: $color-scrollbar-thumb-hover;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background-color: $color-scrollbar-track;
+}
+
+// Contenedor de texto
+.text-container {
+  font-size: 2.2rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  > span {
+    color: white;
+
+    &:nth-child(3) {
+      font-size: 1.3rem;
+      font-weight: normal;
+      margin-top: 15px;
+    }
+  }
+}
+
+// Texto cambiante
+.changing-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  border: 2px solid gray;
+  border-radius: 13px;
+  background-color: #101010;
+  height: 1.3em;
+  box-sizing: border-box;
+  min-width: 200px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  transition: 0.5s;
+
+  span {
+    display: inline-block;
+    background: linear-gradient(to right, #0020ff, #ff00e7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    white-space: nowrap;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 1s, transform 1s;
+
+    &.active {
+      opacity: 1;
+      transform: translate(-50%, -59%);
+    }
+
+    &.outgoing {
+      opacity: 0;
+      transform: translate(-50%, 50%);
+    }
+
+    &.incoming {
+      opacity: 0;
+      transform: translate(-50%, -150%);
+    }
+  }
+}
+
+// Botón
+.text-container button {
+  @include gradient-button;
+  position: relative;
+  overflow: hidden;
+  font-size: 20px;
+  border: 1px solid transparent;
+  border-radius: 13px;
+  width: 110%;
+  max-width: 300px;
+  padding: 14px;
+  color: white;
+  transition: 0.5s;
+  margin: 14px 1px 130px;
+  margin-top: 40px;
+  margin-left: -10px;
+
+  &:hover {
+    animation: changeGradient2 1s infinite alternate;
+  }
+}
+
+@keyframes changeGradient2 {
+    0% {
+        background: linear-gradient(#202020, #202020) padding-box,
+            linear-gradient(145deg, #e81cff, #40c9ff) border-box;
+    }
+
+    5% {
+        background: linear-gradient(#202020, #202020) padding-box,
+            linear-gradient(148deg, #e81cff, #40c9ff) border-box;
+    }
+
+    10% {
+        background: linear-gradient(#202020, #202020) padding-box,
+            linear-gradient(151deg, #e81cff, #40c9ff) border-box;
+    }
+
+    15% {
+        background: linear-gradient(#202020, #202020) padding-box,
+            linear-gradient(154deg, #e81cff, #40c9ff) border-box;
+    }
+
+    20% {
+        background: linear-gradient(#202020, #202020) padding-box,
+            linear-gradient(157deg, #e81cff, #40c9ff) border-box;
+    }
+
+    25% {
+        background: linear-gradient(#202020, #202020) padding-box,
+            linear-gradient(160deg, #e81cff, #40c9ff) border-box;
+    }
+
+    30% {
+        background: linear-gradient(#202020, #202020) padding-box,
+            linear-gradient(163deg, #e81cff, #40c9ff) border-box;
+    }
+
+    35% {
+        background: linear-gradient(#202020, #202020) padding-box,
+            linear-gradient(166deg, #e81cff, #40c9ff) border-box;
+    }
+
+    40% {
+        background: linear-gradient(#202020, #202020) padding-box,
+            linear-gradient(169deg, #e81cff, #40c9ff) border-box;
+    }
+
+    45% {
+        background: linear-gradient(#202020, #202020) padding-box,
+            linear-gradient(172deg, #e81cff, #40c9ff) border-box;
+    }
+
+    50% {
+        background: linear-gradient(#202020, #202020) padding-box,
+            linear-gradient(175deg, #e81cff, #40c9ff) border-box;
+    }
+
+    55% {
+        background: linear-gradient(#202020, #202020) padding-box,
+            linear-gradient(178deg, #e81cff, #40c9ff) border-box;
+    }
+
+    60% {
+        background: linear-gradient(#202020, #202020) padding-box,
+            linear-gradient(181deg, #e81cff, #40c9ff) border-box;
+    }
+
+    65% {
+        background: linear-gradient(#202020, #202020) padding-box,
+            linear-gradient(184deg, #e81cff, #40c9ff) border-box;
+    }
+
+    70% {
+        background: linear-gradient(#202020, #202020) padding-box,
+            linear-gradient(187deg, #e81cff, #40c9ff) border-box;
+    }
+
+    75% {
+        background: linear-gradient(#202020, #202020) padding-box,
+            linear-gradient(190deg, #e81cff, #40c9ff) border-box;
+    }
+
+    80% {
+        background: linear-gradient(#202020, #202020) padding-box,
+            linear-gradient(193deg, #e81cff, #40c9ff) border-box;
+    }
+
+    85% {
+        background: linear-gradient(#202020, #202020) padding-box,
+            linear-gradient(196deg, #e81cff, #40c9ff) border-box;
+    }
+
+    90% {
+        background: linear-gradient(#202020, #202020) padding-box,
+            linear-gradient(199deg, #e81cff, #40c9ff) border-box;
+    }
+
+    95% {
+        background: linear-gradient(#202020, #202020) padding-box,
+            linear-gradient(202deg, #e81cff, #40c9ff) border-box;
+    }
+
+    100% {
+        background: linear-gradient(#202020, #202020) padding-box,
+            linear-gradient(205deg, #e81cff, #40c9ff) border-box;
+    }
+}
+
+.changing-text span.outgoing {
+    opacity: 0;
+    transform: translate(-50%, 50%);
+    /* Mueve hacia abajo */
+}
+
+.changing-text span.incoming {
+    opacity: 0;
+    transform: translate(-50%, -150%);
+    /* La nueva palabra empieza desde arriba */
+}

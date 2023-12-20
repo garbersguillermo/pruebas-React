@@ -1,0 +1,15 @@
+body {
+  background-color: #101010;
+  background-image: url('/wp-content/uploads/2023/11/Fondo-estrellado-5.webp');
+  background-size: 100%;
+  background-repeat: repeat-y;
+  transition: background-position 0.1s;
+  scrollbar-width: thin;
+  scrollbar-color: #505050 #303030;
+}
+
+.app-container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}

@@ -1,0 +1,122 @@
+$color-white: #CBCBCB;
+$color-border: #414141;
+$color-border-focus: #e81cff;
+$color-button-bg: #313131;
+$color-button-border: #BB27FF;
+$color-primary: #212121;
+$font-primary: inherit;
+$border-radius: 8px;
+$color-background-body: #101010;
+
+body {
+    background-color: $color-background-body;
+  }
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  .form-container {
+    width: 500px;
+    background: linear-gradient($color-primary, $color-primary) padding-box, linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+    border: 2px solid transparent;
+    padding: 30px 24px;
+    font-size: 14px;
+    font-family: $font-primary;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    margin-right: auto;
+    margin-left: auto;
+
+    &:active {
+      scale: 1;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: $color-white;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+
+      input {
+        width: 93%;
+        padding: 12px 16px;
+        border-radius: $border-radius;
+        font-family: $font-primary;
+        background-color: transparent !important;
+        border: 1px solid $color-border;
+        color: #CBCBCB;
+        font-size: 1.2rem;
+        &::placeholder {
+          opacity: 0.5;
+        }
+
+        &:focus {
+          outline: none;
+          border-color: $color-border-focus;
+        }
+      }
+    }
+
+    .form-button {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .form-submit-btn {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        font-family: $font-primary;
+        color: $color-white;
+        font-weight: 600;
+        width: 40%;
+        background: $color-button-bg;
+        border: solid $color-button-border 1px;
+        padding: 12px 16px;
+        font-size: inherit;
+        margin-top: 8px;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: 0.3s ease;
+      }
+
+      a {
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+        color: $color-white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.form-required {
+  height: 10px;
+  color: red;
+}
+
+h1 {
+  color: $color-white !important;
+  text-align: center;
+}

@@ -1,0 +1,140 @@
+// Definición de variables
+$color-background: #101010 !important;
+$color-primary: #e81cff;
+$color-secondary: #40c9ff;
+$color-white: white;
+$color-black: black;
+$color-grey: #414141;
+$color-light-grey: #CBCBCB;
+
+// Estilos generales
+body {
+    background-color: $color-background;
+}
+
+.login-box {
+    margin-top: 40px;
+    max-width: 800px;
+    background: linear-gradient(#212121, #212121) padding-box,
+                linear-gradient(145deg, transparent 35%, $color-primary, $color-secondary) border-box;
+    border: 2px solid transparent;
+    padding: 10px 24px;
+    font-size: 13px;
+    font-family: inherit;
+    color: $color-white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    margin: 0 auto;
+    text-align: center;
+
+    label {
+        display: block;
+        color: $color-white;
+        margin-bottom: 5px;
+    }
+
+    .group {
+        text-align: start;
+        font-size: 10pt;
+        font-weight: 600;
+        display: flex;
+    }
+
+    .input-group{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        margin-right: 40px;
+        font-size: 12px;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px 16px;
+        border-radius: 8px;
+        color: $color-white;
+        font-family: inherit;
+        background-color: transparent;
+        border: 1px solid $color-grey;
+
+        &::placeholder {
+            opacity: 0.5;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: $color-primary;
+        }
+    }
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: inherit;
+        color: $color-light-grey;
+        font-weight: 600;
+        width: 50%;
+        margin: 20px auto 0;
+        background: #313131;
+        border: solid $color-primary 1px;
+        padding: 12px 16px;
+        font-size: inherit;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: 0.3s ease;
+        text-align: center;
+    }
+
+    a {
+        text-align: center;
+        width: 100%;
+        margin-top: -8px;
+        color: $color-light-grey;
+        padding: 0 0 10px;
+        text-decoration: none;
+    }
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+
+    .tooltip-text {
+        visibility: hidden;
+        width: 200px;
+        background-color: rgba($color-black, 0.8);
+        color: $color-white;
+        text-align: center;
+        border-radius: 5px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s;
+
+        &:hover {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.form-required {
+    height: 10px;
+    color: red;
+}
+
+.alert {
+    border-radius: 6px;
+    opacity: 84%;
+    margin-top: -40px;
+    transition: 1s;
+}

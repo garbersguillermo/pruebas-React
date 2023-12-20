@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+
+body{
+    overflow: hidden;
+    background-color: #101010;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: transparent;
+    
+}
+
+.text {
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8em;
+    font-weight: bold;
+    text-shadow: #111 1px 1px 5px, rgba(255,255,255, 0) 0px 1px 4px;
+    background: linear-gradient(45deg, #101010, #0020ff, #ff00e7, #101010, #101010);
+    background-repeat: no-repeat;
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: flashEffect 1.5s infinite;
+    -webkit-text-stroke: 1px #101010;
+    user-select: none;
+    letter-spacing: 2px;
+}
+
+@keyframes flashEffect {
+    0% {
+        background-position: 150% center;
+    }
+    100% {
+        background-position: -130% center;
+    }
+}

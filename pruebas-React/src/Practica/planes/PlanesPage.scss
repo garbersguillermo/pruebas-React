@@ -1,0 +1,203 @@
+// Variables para colores y medidas
+$color-background: #101010;
+$color-scrollbar-thumb: #505050;
+$color-scrollbar-track: #303030;
+$color-card-background: white;
+$color-header-background: #FFE600;
+$color-header-text: #2D3277;
+$gradient-card: linear-gradient($color-card-background, $color-card-background) padding-box, 
+                linear-gradient(145deg, #e81cff, #40c9ff) border-box;
+
+// Estilos generales
+body {
+  background-color: $color-background;
+  background-image: url('/wp-content/uploads/2023/11/Fondo-estrellado-5.webp');
+  background-size: 100%;
+  background-repeat: repeat-y;
+  transition: background-position 0.1s;
+  scrollbar-width: thin;
+  scrollbar-color: $color-scrollbar-thumb $color-scrollbar-track;
+
+  img {
+    max-width: none !important;
+  }
+
+  ::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $color-scrollbar-thumb;
+    border-radius: 6px;
+
+    &:hover {
+      background-color: #101010;
+    }
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: $color-scrollbar-track;
+  }
+}
+
+// Estilos para el contenedor principal
+.main-plan-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+}
+
+// Estilos para la tarjeta
+.plan-container {
+  background-color: $color-card-background;
+  width: 556px;
+  height: auto;
+  max-height: 100%;
+  flex: 1; 
+  overflow: hidden;
+  padding: 25px;
+  background: $gradient-card;
+  border: 2px solid transparent;
+  border-radius: 13px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: background 1s infinite alternate;
+
+  &:hover {
+    animation: changeGradient 1s infinite alternate;
+  }
+}
+
+// Estilos para el encabezado
+.header {
+  background-color: $color-header-background;
+  color: $color-header-text;
+  text-align: center;
+  padding: 10px;
+  border-radius: 30px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  img {
+    width: 190px;
+    margin-bottom: 5px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+}
+
+/* Estilos para el interruptor (switch) */
+.switch {
+  position: relative;
+  background: #f5f5f5;
+  border-radius: 30px;
+  padding: 5px;
+  margin: 20px auto;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+
+.switch button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 10px 20px;
+  transition: all 0.3s;
+  font-size: 20px;
+  color: #9a9a9a;
+  border-radius: 25px;
+  flex: 1;
+  z-index: 2;
+}
+
+.switch button.active {
+  color: white;
+  font-weight: bold;
+  background-color: #3483FA;
+}
+
+.switch .slider {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 50%;
+  bottom: 5px;
+  background-color: transparent;
+  border-radius: 25px;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.switch .discount-tag {
+  position: absolute;
+  top: -10px;
+  right: 9px;
+  background-color: crimson;
+  color: white;
+  padding: 1px 8px;
+  border-radius: 20px;
+  font-size: 17px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  z-index: 3;
+}
+
+/* Estilos para la tabla (table) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  padding: 17px;
+}
+
+table, th, td {
+  text-align: left;
+}
+
+th, td {
+  font-size: 1.4em;
+}
+
+th {
+  border-bottom: 2px solid #000;
+}
+
+table tr td:nth-child(2) {
+  font-size: 1.4em;
+  font-weight: bold;
+  padding-left: 140px;
+}
+
+table tr:first-child td {
+  font-weight: bold;
+  color: black;
+}
+
+/* Estilos para el pie de página (footer) */
+.footer {
+  text-align: center;
+  align-items: center;
+}
+
+.footer img {
+  width: 170px; /* Ajusta según tu logotipo */
+}
+
+/* Estilos para el descargo de responsabilidad (disclaimer) */
+.disclaimer {
+  font-size: 20px;
+  text-align: center;
+}
+
+
+@keyframes changeGradient {
+  /* Animación de cambio de gradiente */
+  /* (Mantén la misma animación que proporcionaste) */
+}

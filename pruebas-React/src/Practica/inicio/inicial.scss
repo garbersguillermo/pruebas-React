@@ -1,0 +1,247 @@
+// Variables
+$background-image: '/wp-content/uploads/2023/11/Fondo-estrellado-5.webp';
+$scrollbar-color-outer: #505050;
+$scrollbar-color-inner: #303030;
+
+// Estilos
+body {
+  background-image: url($background-image);
+  background-size: 100%;
+  background-repeat: repeat-y;
+  transition: background-position 0.1s;
+  scrollbar-width: thin;
+  scrollbar-color: $scrollbar-color-outer $scrollbar-color-inner;
+
+  img {
+    max-width: none !important;
+  }
+
+  &::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-color-outer;
+    border-radius: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #101010;
+    border-radius: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $scrollbar-color-inner;
+  }
+}
+
+section#inicio {
+  display: grid;
+  grid-template-columns: 40dvw 50dvw;
+  height: calc(90vh - 90px);
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto auto;
+  }
+
+  button {
+    background: linear-gradient(#202020, #202020) padding-box,
+      linear-gradient(145deg, #e81cff, #40c9ff) border-box;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent;
+    border-radius: 13px;
+    width: 105%;
+    max-width: 300px;
+    padding: 14px;
+    color: white;
+    transition: 0.5s;
+    margin: 14px 1px 130px;
+    margin-top: 40px;
+    margin-left: -10px;
+    &:hover {
+      animation: changeGradient 1s infinite alternate;
+    }
+  }
+
+  > img {
+    width: 120%;
+    margin-top: -30px;
+    margin-left: -12px;
+    align-self: center;
+  }
+}
+
+@keyframes changeGradient {
+  0% {
+    background: linear-gradient(#202020, #202020) padding-box,
+      linear-gradient(145deg, #e81cff, #40c9ff) border-box;
+  }
+  5% {
+    background: linear-gradient(#202020, #202020) padding-box,
+      linear-gradient(148deg, #e81cff, #40c9ff) border-box;
+  }
+  10% {
+    background: linear-gradient(#202020, #202020) padding-box,
+      linear-gradient(151deg, #e81cff, #40c9ff) border-box;
+  }
+  15% {
+    background: linear-gradient(#202020, #202020) padding-box,
+      linear-gradient(154deg, #e81cff, #40c9ff) border-box;
+  }
+  20% {
+    background: linear-gradient(#202020, #202020) padding-box,
+      linear-gradient(157deg, #e81cff, #40c9ff) border-box;
+  }
+  25% {
+    background: linear-gradient(#202020, #202020) padding-box,
+      linear-gradient(160deg, #e81cff, #40c9ff) border-box;
+  }
+  30% {
+    background: linear-gradient(#202020, #202020) padding-box,
+      linear-gradient(163deg, #e81cff, #40c9ff) border-box;
+  }
+  35% {
+    background: linear-gradient(#202020, #202020) padding-box,
+      linear-gradient(166deg, #e81cff, #40c9ff) border-box;
+  }
+  40% {
+    background: linear-gradient(#202020, #202020) padding-box,
+      linear-gradient(169deg, #e81cff, #40c9ff) border-box;
+  }
+  45% {
+    background: linear-gradient(#202020, #202020) padding-box,
+      linear-gradient(172deg, #e81cff, #40c9ff) border-box;
+  }
+  50% {
+    background: linear-gradient(#202020, #202020) padding-box,
+      linear-gradient(175deg, #e81cff, #40c9ff) border-box;
+  }
+  55% {
+    background: linear-gradient(#202020, #202020) padding-box,
+      linear-gradient(178deg, #e81cff, #40c9ff) border-box;
+  }
+  60% {
+    background: linear-gradient(#202020, #202020) padding-box,
+      linear-gradient(181deg, #e81cff, #40c9ff) border-box;
+  }
+  65% {
+    background: linear-gradient(#202020, #202020) padding-box,
+      linear-gradient(184deg, #e81cff, #40c9ff) border-box;
+  }
+  70% {
+    background: linear-gradient(#202020, #202020) padding-box,
+      linear-gradient(187deg, #e81cff, #40c9ff) border-box;
+  }
+  75% {
+    background: linear-gradient(#202020, #202020) padding-box,
+      linear-gradient(190deg, #e81cff, #40c9ff) border-box;
+  }
+  80% {
+    background: linear-gradient(#202020, #202020) padding-box,
+      linear-gradient(193deg, #e81cff, #40c9ff) border-box;
+  }
+  85% {
+    background: linear-gradient(#202020, #202020) padding-box,
+      linear-gradient(196deg, #e81cff, #40c9ff) border-box;
+  }
+  90% {
+    background: linear-gradient(#202020, #202020) padding-box,
+      linear-gradient(199deg, #e81cff, #40c9ff) border-box;
+  }
+  95% {
+    background: linear-gradient(#202020, #202020) padding-box,
+      linear-gradient(202deg, #e81cff, #40c9ff) border-box;
+  }
+  100% {
+    background: linear-gradient(#202020, #202020) padding-box,
+      linear-gradient(205deg, #e81cff, #40c9ff) border-box;
+  }
+}
+
+.text-container {
+  font-size: 3em;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  > span {
+    color: white;
+  }
+
+  > span:nth-child(3) {
+    font-size: 1.7rem;
+    font-weight: normal;
+    margin-top: 15px;
+  }
+}
+
+.changing-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  border: 2px solid gray;
+  border-radius: 13px;
+  background-color: #101010;
+  height: 1.3em;
+  box-sizing: border-box;
+  min-width: 200px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  transition: 0.5s;
+
+  span {
+    display: inline-block;
+    background: linear-gradient(to right, #0020ff, #ff00e7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    white-space: nowrap;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 1s, transform 1s;
+
+    &.active {
+      opacity: 1;
+      transform: translate(-50%, -59%);
+      transition: opacity 1s, transform 1s;
+    }
+
+    &.outgoing {
+      opacity: 0;
+      transform: translate(-50%, 50%);
+    }
+
+    &.incoming {
+      opacity: 0;
+      transform: translate(-50%, -150%);
+    }
+  }
+}
+
+.logo-container {
+  position: absolute;
+  bottom: 10%;
+  right: 20px;
+  display: flex;
+  gap: 25px;
+
+  img {
+    max-width: 100px !important;
+    max-height: 100px;
+    margin-left: 30px;
+    opacity: 0.7;
+  }
+}

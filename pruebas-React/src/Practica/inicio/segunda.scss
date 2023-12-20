@@ -1,0 +1,70 @@
+// Define el mixin primero
+@mixin gradient-background($direction) {
+    //border: 1px solid transparent; // Definir un borde transparente
+    background-image: linear-gradient(#212121, #212121), linear-gradient(to $direction, #e81cff, #40c9ff);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+  
+  #cards-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 70px;
+    margin: 0 auto 20px;
+    width: 80vw;
+    justify-items: center;
+    align-content: center;
+  
+    .card {
+      padding: 20px;
+      
+      border-radius: 30px;
+      color: white;
+      transition: background-color 0.3s ease, transform 0.4s ease;
+      min-height: 250px; 
+      width: 100%;
+      cursor: pointer;
+  
+      &:hover {
+        transform: scale(1.02);
+        background-color: purple;
+      }
+  
+      &:nth-child(1) {
+        @include gradient-background(top left);
+      }
+  
+      &:nth-child(2) {
+        @include gradient-background(top right);
+      }
+  
+      &:nth-child(3) {
+        @include gradient-background(bottom left);
+      }
+  
+      &:nth-child(4) {
+        @include gradient-background(bottom right);
+      }
+  
+      h2 {
+        font-size: 2.3rem;
+      }
+  
+      p {
+        font-size: 1.5rem;
+      }
+  
+      .card-title {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin-left: -15px;
+        margin-top: -15px;
+  
+        img {
+          width: 90px;
+        }
+      }
+    }
+  }
+  
