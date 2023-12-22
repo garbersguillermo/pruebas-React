@@ -10,11 +10,21 @@ $color-light-grey: #CBCBCB;
 // Estilos generales
 body {
     background-color: $color-background;
+    margin-top: 20px ;
 }
 
 .login-box {
-    margin-top: 40px;
-    max-width: 800px;
+    margin-top: 50px !important;
+    min-height: 500px; // Establece un tamaño mínimo
+    max-height: 600px; // Establece un tamaño máximo si es necesario
+    min-width: 800px; // Establece un ancho mínimo
+    overflow: auto; // Asegura que todo el contenido sea accesible
+    max-width: 800px; // Establece un ancho máximo si es necesari
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Alinea los elementos hijos horizontalmente en el centro
+    justify-content: center; // Alinea los elementos hijos verticalmente en el centro
+
     background: linear-gradient(#212121, #212121) padding-box,
                 linear-gradient(145deg, transparent 35%, $color-primary, $color-secondary) border-box;
     border: 2px solid transparent;
@@ -29,6 +39,7 @@ body {
     border-radius: 16px;
     margin: 0 auto;
     text-align: center;
+    
 
     label {
         display: block;

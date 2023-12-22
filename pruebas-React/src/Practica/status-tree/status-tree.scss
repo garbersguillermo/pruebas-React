@@ -4,43 +4,39 @@ body {
     justify-content: center; // Centra horizontalmente
     align-items: center; // Centra verticalmente
     min-height: 100vh; // Altura mínima del viewport
-    
+       color: white;
 }
 
 .button-radio-container {
-
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 20px;
-    font-size: 0.35em !important;
+    font-size: 0.9em;
+
     @media (max-width: 768px) {
         flex-direction: column;
     }
-    
 }
 
-// Estilos para la botonera de radios
 .radio-button-container {
-    gap: 5px !important;
-    margin-top: 5em;
     .chakra-radio {
-        
         padding: 10px 20px;
         border: 1px solid #ccc;
         border-radius: 4px;
-        
+        margin-right: 10px;
         cursor: pointer;
         transition: background-color 0.3s, border-color 0.3s;
+        position: relative; // Posicionamiento relativo aquí
 
         &:hover {
-            background-color: #f4f4f4 ;
+            background-color: #f4f4f4;
         }
 
         &.chakra-radio__checked {
-            background-color: #007bff; // Cambia según tus preferencias
-            border-color: #007bff; 
-
+            background-color: #007bff;
+            border-color: #007bff;
+            
             .chakra-radio__label {
                 color: white;
             }
@@ -48,26 +44,25 @@ body {
 
         .chakra-radio__label {
             display: flex;
-            font-size: 2.5em ;
             align-items: center;
             justify-content: space-between;
             width: 100%;
-            white-space: nowrap; // Esto evita que el texto se ajuste
+            white-space: nowrap; // Evita que el texto se ajuste
 
-            
             .option-count {
+                position: absolute; // Posicionamiento absoluto
+                top: -10px; // Posición ajustada desde el borde superior
+                right: -10px; // Posición ajustada desde el borde derecho
                 background-color: red;
                 color: white;
                 border-radius: 50%;
                 padding: 2px 6px;
                 font-size: 0.75em;
-                position: relative;
-                top: -20px;
-                right: -10px;
-                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
             }
         }
     }
 }
+
 
 // Aquí puedes añadir estilos adicionales si es necesario

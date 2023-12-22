@@ -1,6 +1,17 @@
 
     .step1-box{
         border: 0px;
+        input.telefono-input, // Selector más específico
+        #telefono { // Selector por ID
+            padding-left: 38px; // Ajusta el padding-left
+            // Otros estilos específicos para el input de teléfono
+        }
+
+        input.correo-input, // Selector más específico
+        #email { // Selector por ID
+            padding-left: 38px; // Ajusta el padding-left
+            // Otros estilos específicos para el input de teléfono
+        }
     }
 
     label {

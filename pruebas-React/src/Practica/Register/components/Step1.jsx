@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import { FaPhone } from 'react-icons/fa'; // Asegúrate de tener react-icons instalado
+import { FaEnvelope } from 'react-icons/fa'; 
+import { Input, InputGroup, InputLeftElement, Icon } from '@chakra-ui/react';
+
+
 
 export default function Step1({ onValidation }) {
   const [name, setName] = useState('');
@@ -87,35 +92,50 @@ export default function Step1({ onValidation }) {
         </div>
       </div>
       <div className="group">
+      <div className="input-group">
+                <label htmlFor="email">Correo</label>
+                <InputGroup>
+                    <InputLeftElement pointerEvents="none">
+                        <Icon as={FaEnvelope} color="gray.300" />
+                    </InputLeftElement>
+                    <Input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        onBlur={() => validateField('email', email)}
+                        pattern=".+@.+\..+"
+                        autoComplete="username"
+                        required
+                        placeholder="Tu Correo"
+                        className="correo-input" 
+
+                                            />
+                </InputGroup>
+                <span className="form-required">{emailError}</span>
+            </div>
         <div className="input-group">
-          <label htmlFor="email">Correo</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={email}
-            onBlur={() => validateField('email', email)}
-            onChange={(e) => setEmail(e.target.value)}
-            pattern=".+@.+\..+"
-            autoComplete="username"
-            required
-          />
-          <span className="form-required">{emailError}</span>
-        </div>
-        <div className="input-group">
-          <label htmlFor="telefono">Telefono</label>
-          <input
-            type="number"
-            id="telefono"
-            name="telefono"
-            value={telefono}
-            onBlur={() => validateField('telefono', telefono)}
-            onChange={(e) => setTelefono(e.target.value)}
-            autoComplete="tel"
-            required
-          />
-          <span className="form-required">{telefonoError}</span>
-        </div>
+                <label htmlFor="telefono">Teléfono</label>
+                <InputGroup>
+                    <InputLeftElement pointerEvents="none">
+                        <Icon as={FaPhone} color="gray.300" /> {/* Ícono de teléfono */}
+                    </InputLeftElement>
+                    <Input
+                     type="tel"
+                     id="telefono"
+                     name="telefono"
+                     value={telefono}
+                     onChange={(e) => setTelefono(e.target.value)}
+                     onBlur={() => validateField('telefono', telefono)}
+                     autoComplete="tel"
+                     placeholder="Tu teléfono"
+                     className="telefono-input" 
+                     required
+                                          />
+                </InputGroup>
+                <span className="form-required">{telefonoError}</span>
+            </div>
       </div>
       </form>
     </div>

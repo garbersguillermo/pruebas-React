@@ -15,7 +15,7 @@ const StepIndicator = ({ steps, currentStep }) => {
         <Circle
           key={index}
           size="40px" // Aumenta el tamaño aquí
-          bg={currentStep === index ? "teal.500" : "gray.700"}
+          bg={currentStep === index ? "#e81cff" : "gray.700"}
           color="white"
           mx={2}
         >

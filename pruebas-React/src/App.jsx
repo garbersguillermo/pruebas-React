@@ -5,6 +5,7 @@ import StatusTree from './Practica/status-tree/Status-Tree';
 import './Practica/status-tree/status-tree.scss'
 
 
+
 const theme = extendTheme({
   // Configura el tema personalizado si es necesario
 });
@@ -14,8 +15,8 @@ function App() {
     <ChakraProvider theme={theme}>
       <CSSReset />
       <div className="App">
-        {/* <Register /> */}
-        <StatusTree />
+         <Register /> 
+       {/*  <StatusTree /> */}
       </div>
     </ChakraProvider>
   );
